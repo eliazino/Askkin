@@ -8,6 +8,7 @@ namespace Core.Model.DTO.Configuration {
         public DBConfig SQLite { get; set; }
         public DBConfig MongoDB { get; set; }
         public ElasticSearch ElasticSearch { get; set; }
+        public KeySalt KeySalt { get; set; }
     }
     public class DBConfig {
         public string server { get; set; }
@@ -28,5 +29,9 @@ namespace Core.Model.DTO.Configuration {
     public class ApiKeyAuthentication {
         public string id { get; set; }
         public string apiKey { get; set; }
+    }
+    public class KeySalt {
+        public string salt { get; set; }
+        public int saltIndex { get; set; }
     }
 }
