@@ -9,6 +9,12 @@ namespace Core.Model.DTO.Configuration {
         public DBConfig MongoDB { get; set; }
         public ElasticSearch ElasticSearch { get; set; }
         public KeySalt KeySalt { get; set; }
+        public JWTSettings JWTSettings { get; set; }
+    }
+    public class JWTSettings {
+        public string jwtSecret { get; set; }
+        public bool identityExpires { get; set; } = true;
+        public int identityExpiryMins { get; set; } = 1440; //1 Day
     }
     public class DBConfig {
         public string server { get; set; }
