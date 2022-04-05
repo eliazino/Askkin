@@ -1,5 +1,6 @@
 ﻿using Core.Model.Attributes;
 using Core.Model.DTO.Configuration;
+using Infrastructure.Abstraction.Database;
 using LinqKit;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson;
@@ -12,7 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Infrastructure.Libraries.MongoDB {
-    public class MongoDB {
+    public class MongoDB : IMongoDbCommand, IDisposable {
         private IMongoDatabase _dataStore;
         private MongoClient _client;
         private DBConfig _config;
@@ -175,6 +176,12 @@ namespace Infrastructure.Libraries.MongoDB {
             var collection = _dataStore.GetCollection<T>(typeof(T).Name);
             var result = await collection.DeleteManyAsync(filter);
             return result.IsAcknowledged;
+        }
+
+        public void Dispose() {
+            try {
+                //_client does not need to be disposed of/ But maybe something else
+            } catch { }
         }
     }
 }
