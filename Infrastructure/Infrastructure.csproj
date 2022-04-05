@@ -26,6 +26,7 @@
     <PackageReference Include="MySqlConnector" Version="2.1.2" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Abstraction\Identity\" />
     <Folder Include="Abstraction\Queue\" />
     <Folder Include="DI\" />
     <Folder Include="Libraries\MySQL\" />
@@ -34,5 +35,8 @@
     <Folder Include="Libraries\HTTP\" />
     <Folder Include="Libraries\SQLite\" />
     <Folder Include="Repository\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
   </ItemGroup>
 </Project>
