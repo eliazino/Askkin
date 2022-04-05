@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Infrastructure.Abstraction.Database;
+using Infrastructure.Abstraction.Database.SQL;
 using Infrastructure.DTO;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Infrastructure.Repository.SQL {
-    public class Repository {
+    public class Repository : IRepository {
         private IDBCommand IDBCommand;
         private readonly IMapper _mapper;
         public Repository(IDBCommand IDBCommand, IMapper _mapper) {
