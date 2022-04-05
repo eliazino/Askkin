@@ -9,7 +9,10 @@
     <Folder Include="Application\Exceptions\" />
     <Folder Include="Application\DI\" />
     <Folder Include="Application\UseCases\" />
-    <Folder Include="Model\DTO\" />
+    <Folder Include="Model\DTO\Internal\" />
+    <Folder Include="Model\DTO\External\" />
+    <Folder Include="Model\DTO\Response\" />
+    <Folder Include="Model\DTO\Request\" />
     <Folder Include="Model\Entities\" />
     <Folder Include="Model\Attributes\" />
     <Folder Include="Model\Enums\" />
