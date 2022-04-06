@@ -9,7 +9,6 @@
     <Folder Include="Model\DTO\Internal\" />
     <Folder Include="Model\DTO\Response\" />
     <Folder Include="Model\DTO\Request\" />
-    <Folder Include="Model\Entities\" />
     <Folder Include="Model\Enums\" />
     <Folder Include="Model\ValueObjects\" />
   </ItemGroup>
