@@ -6,5 +6,6 @@ namespace Core.Model.Entities {
     public class Topics {
         public long id { get; protected set; }
         public string spaceName { get; protected set; }
+        public long subscribers { get; protected set; }
     }
 }
