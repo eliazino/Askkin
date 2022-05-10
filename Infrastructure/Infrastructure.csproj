@@ -11,6 +11,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.DependencyValidation.Analyzers" Version="0.11.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.ML" Version="1.7.0" />
     <PackageReference Include="MongoDB.Bson" Version="2.12.1" />
     <PackageReference Include="MongoDB.Driver" Version="2.12.1" />
     <PackageReference Include="MongoDB.Driver.Core" Version="2.12.1" />
@@ -27,5 +28,17 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj" />
+  </ItemGroup>
+  <ItemGroup Label="CommentSPAMHunter">
+    <None Include="CommentSPAMHunter.consumption.cs">
+      <DependentUpon>CommentSPAMHunter.mbconfig</DependentUpon>
+    </None>
+    <None Include="CommentSPAMHunter.training.cs">
+      <DependentUpon>CommentSPAMHunter.mbconfig</DependentUpon>
+    </None>
+    <None Include="CommentSPAMHunter.zip">
+      <DependentUpon>CommentSPAMHunter.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>
