@@ -23,7 +23,8 @@ namespace Core.Model.Enums {
 
     public enum ReportClass {
         MISLEADING,
-        HATEFUL
+        HATEFUL,
+        SPAM
     }
 
     public enum ReportStatus {
